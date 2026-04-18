@@ -3,17 +3,59 @@ const insightsInnerHtml = `
     <div class="insights-image">
       <div class="insights-slider">
         <div class="slider-track">
-          <div class="slide active"><img src="images/img-1.png" alt="Business Team Using Tablet"></div>
-          <div class="slide"><img src="images/img-1.png" alt="Business Dashboard"></div>
-          <div class="slide"><img src="images/img-1.png" alt="Team Performance"></div>
-          <div class="slide"><img src="images/img-1.png" alt="Resource Management"></div>
+          <div class="slide active">
+            <img src="images/bex-1.webp" alt="Business Dashboard">
+            <div class="stat-card">
+              <div class="stat-badge">You saved $3,800.00</div>
+              <div class="stat-value">90%</div>
+              <div class="stat-label"><span style="color:#A0AEC0">Your Finance is</span> excellent</div>
+              <div class="stat-progress-segments">
+                <div class="segment filled"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/bex-2.webp" alt="Operations Dashboard">
+            <div class="stat-card">
+              <div class="stat-badge">&#187; Completed 32% faster</div>
+              <div class="stat-value">88%</div>
+              <div class="stat-label"><span style="color:#A0AEC0">Operations running</span> efficiently</div>
+              <div class="stat-progress-segments">
+                <div class="segment filled"></div>
+                <div class="segment filled"></div>
+                <div class="segment"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/bex-3.webp" alt="HR Dashboard">
+            <div class="stat-card">
+              <div class="stat-badge">&#9652; Productivity 21%</div>
+              <div class="stat-value">91%</div>
+              <div class="stat-label"><span style="color:#A0AEC0">Resources optimally</span> utilized</div>
+              <div class="stat-progress-segments">
+                <div class="segment filled"></div>
+                <div class="segment filled"></div>
+                <div class="segment"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/bex-4.webp" alt="Risk Dashboard">
+            <div class="stat-card">
+              <div class="stat-badge">&#9662; Potential risks detected early</div>
+              <div class="stat-value">Low Risk</div>
+              <div class="stat-label"><span style="color:#A0AEC0">Business risks under</span> control</div>
+              <div class="stat-progress-segments">
+                <div class="segment filled"></div>
+                <div class="segment"></div>
+                <div class="segment"></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-badge">You saved $3,500.00</div>
-        <div class="stat-value">90%</div>
-        <div class="stat-label">Your Finance is excellent</div>
-        <div class="stat-progress"></div>
       </div>
       <div class="slider-dots">
         <span class="dot active" data-slide="0"></span>
@@ -51,23 +93,51 @@ const leadersInnerHtml = `
     <div class="leaders-image">
       <div class="leaders-slider">
         <div class="slider-track-leaders">
-          <div class="slide-leader active"><img src="images/img-2.png" alt="Business Executives"></div>
-          <div class="slide-leader"><img src="images/img-2.png" alt="Leadership Team"></div>
-          <div class="slide-leader"><img src="images/img-2.png" alt="Executive Meeting"></div>
-          <div class="slide-leader"><img src="images/img-2.png" alt="Business Strategy"></div>
+          <div class="slide-leader active">
+            <img src="images/bex-5.webp" alt="Business Team">
+            <div class="revenue-card">
+              <div class="stat-badge">&#9652; 9.9% vs last month</div>
+              <div class="revenue-amount">$85,200</div>
+              <div class="stat-label"><span style="color:#A0AEC0">Total</span> Sales</div>
+              <div class="stat-progress-segments">
+                <div class="segment filled"></div>
+                <div class="segment filled"></div>
+                <div class="segment filled"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-leader">
+            <img src="images/bex-6.webp" alt="Business Executives">
+            <div class="revenue-card">
+              <div class="stat-badge">&#9652; 14% productivity increase</div>
+              <div class="revenue-amount">94%</div>
+              <div class="stat-label"><span style="color:#A0AEC0">Operational</span> Efficiency</div>
+              <div class="stat-progress-segments">
+                <div class="segment filled"></div>
+                <div class="segment filled"></div>
+                <div class="segment filled"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide-leader">
+            <img src="images/bex-7.webp" alt="Team Performance">
+            <div class="revenue-card">
+              <div class="stat-badge">&#9652; 28% growth capacity</div>
+              <div class="revenue-amount">120+</div>
+              <div class="stat-label"><span style="color:#A0AEC0">Active</span> Projects</div>
+              <div class="stat-progress-segments">
+                <div class="segment filled"></div>
+                <div class="segment filled"></div>
+                <div class="segment filled"></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="revenue-card">
-        <div class="stat-badge">↑ 8.5% vs last month</div>
-        <div class="revenue-amount">$85,200</div>
-        <div class="stat-label">Total Sales</div>
-        <div class="stat-progress"></div>
       </div>
       <div class="slider-dots-leaders">
         <span class="dot-leader active" data-slide="0"></span>
         <span class="dot-leader" data-slide="1"></span>
         <span class="dot-leader" data-slide="2"></span>
-        <span class="dot-leader" data-slide="3"></span>
       </div>
     </div>
   </div>
