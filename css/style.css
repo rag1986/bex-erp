@@ -1256,8 +1256,7 @@
       padding: 0;
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      justify-content: space-between;
+      gap: 16px;
   }
 
   /* Hide mobile accordion on desktop */
@@ -1276,6 +1275,7 @@
       background: #F5F5F5;
       border-radius: 8px;
       font-family: var(--font);
+      text-align: left;
   }
 
   .module-item:hover {
@@ -1286,6 +1286,7 @@
   .module-item.active {
       background: #807DFE;
       color: white;
+      box-shadow: 0 4px 12px rgba(128, 125, 254, 0.3);
   }
 
   /* Remove ::after on desktop */
@@ -1329,23 +1330,30 @@
   .module-content {
       display: flex;
       align-items: center;
-      gap: 60px;
-      padding: 10px 0 20px 0;
+      gap: 40px;
+      padding: 0;
       justify-content: center;
   }
 
   .module-icons {
       display: flex;
-      gap: 60px;
+      gap: 30px;
   }
 
-  .module-icon {}
+  .module-icon img {
+      width: 32px;
+      height: 32px;
+      opacity: 0.8;
+  }
 
   .module-description {
       color: #01033E;
-      font-size: 16px;
-      line-height: 22px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
       margin: 0;
+      max-width: 450px;
+      text-align: left;
   }
 
   .module-image {
@@ -1358,7 +1366,7 @@
 
   /* Insights Section */
   .insights {
-      padding: 100px 5%;
+      padding: 70px 5%;
       background: white;
   }
 
@@ -1379,6 +1387,7 @@
       position: relative;
       overflow: hidden;
       border-radius: 20px;
+      padding-bottom: 75px;
   }
 
   .slider-track {
@@ -1394,12 +1403,11 @@
   .slide img {
       width: 100%;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   }
 
   .slider-dots {
       position: absolute;
-      bottom: -30px;
+      bottom: 45px;
       right: 30px;
       display: flex;
       gap: 12px;
@@ -1427,7 +1435,6 @@
   .insights-image img {
       width: 100%;
       border-radius: 6px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   }
 
   .stat-card {
@@ -1437,7 +1444,7 @@
       background: white;
       padding: 28px 32px;
       border-radius: 6px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 15px rgba(128, 125, 254, 0.30);
       min-width: 240px;
       z-index: 20;
   }
@@ -1454,7 +1461,7 @@
   }
 
   .stat-value {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
       color: #01033E;
       font-family: var(--font);
@@ -1468,12 +1475,7 @@
   }
 
   .stat-progress {
-      width: 100%;
-      height: 4px;
-      background: #e2e8f0;
-      border-radius: 2px;
-      position: relative;
-      overflow: hidden;
+      display: none;
   }
 
   .stat-progress::after {
@@ -1594,6 +1596,7 @@
       position: relative;
       overflow: hidden;
       border-radius: 20px;
+      padding-bottom: 75px;
   }
 
   .slider-track-leaders {
@@ -1609,12 +1612,11 @@
   .slide-leader img {
       width: 100%;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   }
 
   .slider-dots-leaders {
       position: absolute;
-      bottom: -30px;
+      bottom: 45px;
       left: 30px;
       display: flex;
       gap: 12px;
@@ -1642,7 +1644,6 @@
   .leaders-image img {
       width: 100%;
       border-radius: 6px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   }
 
   .revenue-card {
@@ -1652,7 +1653,7 @@
       background: white;
       padding: 28px 32px;
       border-radius: 6px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 15px rgba(128, 125, 254, 0.30);
       min-width: 200px;
       z-index: 20;
   }
@@ -1669,7 +1670,7 @@
   }
 
   .revenue-amount {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
       color: #01033E;
       font-family: var(--font);
@@ -1682,13 +1683,24 @@
   }
 
   .revenue-card .stat-progress {
-      width: 100%;
+      display: none;
+  }
+
+  .stat-progress-segments {
+      display: flex;
+      gap: 4px;
+      margin-top: 12px;
+  }
+
+  .stat-progress-segments .segment {
       height: 4px;
+      flex: 1;
       background: #e2e8f0;
       border-radius: 2px;
-      position: relative;
-      overflow: hidden;
-      margin-top: 12px;
+  }
+
+  .stat-progress-segments .segment.filled {
+      background: #807DFE;
   }
 
   .revenue-card .stat-progress::after {
@@ -2101,7 +2113,7 @@
       }
 
       .module-list-mobile .module-item.active {
-          background: #8b7dd8;
+          background: #807DFE;
           border-radius: 12px 12px 0 0;
           color: #fff;
       }
@@ -2665,5 +2677,50 @@
       .dot-leader {
           width: 10px;
           height: 10px;
+      }
+  }
+
+  /* Module Callouts */
+  .module-image-container {
+      position: relative;
+      width: 100%;
+  }
+
+  .module-callout {
+      position: absolute;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      width: 260px;
+      z-index: 10;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      pointer-events: none;
+  }
+
+  .module-slide.active .module-callout {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.2s;
+  }
+
+  .module-callout h4 {
+      color: #807DFE;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 6px;
+  }
+
+  .module-callout p {
+      color: #01033E;
+      font-size: 11px;
+      margin: 0;
+  }
+
+  @media (max-width: 968px) {
+      .module-callout {
+          display: none !important;
       }
   }

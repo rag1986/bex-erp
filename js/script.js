@@ -84,7 +84,7 @@ setInterval(() => {
 const sliderTrackLeaders = document.querySelector('.slider-track-leaders');
 const dotsLeaders = document.querySelectorAll('.dot-leader');
 let currentSlideLeaders = 0;
-const totalSlidesLeaders = 4;
+const totalSlidesLeaders = 3;
 
 function goToSlideLeaders(slideIndex) {
     currentSlideLeaders = slideIndex;
@@ -240,18 +240,7 @@ moduleAccordionItems.forEach((item, index) => {
 
 // Handle window resize
 window.addEventListener('resize', () => {
-    if (window.innerWidth <= 968) {
-        // Stop desktop auto-advance on mobile
-        if (moduleInterval) {
-            clearInterval(moduleInterval);
-            moduleInterval = null;
-        }
-    } else {
-        // Restart desktop auto-advance
-        if (!moduleInterval) {
-            startModuleAutoAdvance();
-        }
-    }
+    // Auto-advance disabled, no resize handling needed for tabs
 });
 
 // Form submission — sends to /send-email via Node.js/Zoho SMTP
